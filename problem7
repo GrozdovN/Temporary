@@ -1,23 +1,27 @@
 #include <iostream>
 #include <string>
 
-int main() {
-  string s;
-  cin >> s;
-  
+bool verifyBracketSequence (const string& sq) {
   int bracketsCount = 0;
-  bool isValid = true;
-  for (int i = 0; i < s.length() && isValid; ++i) {
+  
+  for (int i = 0; i < s.length(); ++i) {
     if (s[i] == '(')
       ++bracketsCount;
-    else
+    else if (s[i] == ')')
       --bracketsCount;
+    else
+      return false;
     if (--bracketsCount < 0)
-      isValid = false;
+      retrurn false;
   }
   
   if (bracketsCount != 0)
-    isValid = false;
+    return false;
     
+  return true;
+}
+
+int main() {
+
   return 0;
 }
