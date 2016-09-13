@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+int main() {
+  string s;
+  cin >> s;
+  
+  int bracketsCount = 0;
+  bool isValid = true;
+  for (int i = 0; i < s.length() && isValid; ++i) {
+    if (s[i] == '(')
+      ++bracketsCount;
+    else
+      --bracketsCount;
+    if (--bracketsCount < 0)
+      isValid = false;
+  }
+  
+  if (bracketsCount != 0)
+    isValid = false;
+    
+  return 0;
+}
