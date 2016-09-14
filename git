@@ -1,0 +1,8 @@
+git remote add 1
+clone
+git pull upstream
+    fetch & merge
+merge --abort
+release
+commit
+push
