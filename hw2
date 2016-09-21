@@ -1,17 +1,13 @@
-#include <iostream>
-using namespace std;
-
-int getMaxZeroSuffix (int v) {
+int getMaxSuffix (int v) //возвращает маску, где единицами помечены все 0 в v, стоящие после первой слева 1
+{
   return (v^(v-1))&(v-1);
 }
 
-int getArithMean(int a, int b) {
-  return (a>>1) + (b>>1) + (((a&1) + (b&1))>>1);
+
+int getAverage(int a, int b) //возвращает среднее арифметическое
+{
+  return (a>>1) + (b>>1) + (a&b&1);
 }
 
 
-int main () {
-
-
-  retrun 0;
-}
+//3) процедура возвращает кол-во ведущих нулей в 32-битовом числе
