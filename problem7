@@ -11,7 +11,7 @@ bool verifyBracketSequence (const string& sq) {
       --bracketsCount;
     else
       return false;
-    if (--bracketsCount < 0)
+    if (bracketsCount < 0)
       retrurn false;
   }
   
